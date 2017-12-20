@@ -72,4 +72,6 @@ class RubberDuck < Duck
 end
 
 class DecoyDuck < Duck
+  def quack
+  end
 end
