@@ -53,7 +53,7 @@ describe 'Duck specification' do
     rubberDuck = RubberDuck.new(
       DefaultSwimBehavior.new,
       SqueakSoundBehavior.new,
-      RocketPoweredFlight.new
+      RocketPoweredFlightBehavior.new
     )
 
     expect(rubberDuck.fly).to eq(:rocketPoweredFlight)

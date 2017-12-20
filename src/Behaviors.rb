@@ -32,7 +32,7 @@ class NoFlightBehavior
   end
 end
 
-class RocketPoweredBehavior
+class RocketPoweredFlightBehavior
   def fly
     :rocketPoweredFlight
   end

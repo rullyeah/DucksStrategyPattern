@@ -35,21 +35,29 @@ class MallardDuck < Duck
 end
 
 class RubberDuck < Duck
-  def initialize
+  def initialize(
+    swimBehavior = DefaultSwimBehavior.new,
+    soundBehavior = SqueakSoundBehavior.new,
+    flightBehavior = NoFlightBehavior.new
+  )
     super(
-      DefaultSwimBehavior.new,
-      SqueakSoundBehavior.new,
-      NoFlightBehavior.new
+      swimBehavior,
+      soundBehavior,
+      flightBehavior
     )
   end
 end
 
 class DecoyDuck < Duck
-  def initialize
+  def initialize(
+      swimBehavior = DefaultSwimBehavior.new,
+      soundBehavior = NoSoundBehavior.new,
+      flightBehavior = NoFlightBehavior.new
+    )
     super(
-      DefaultSwimBehavior.new,
-      NoSoundBehavior.new,
-      NoFlightBehavior.new
+      swimBehavior,
+      soundBehavior,
+      flightBehavior
     )
   end
 end
