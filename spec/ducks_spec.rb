@@ -34,6 +34,7 @@ class Duck
   end
 
   def fly
+    :flying
   end
 end
 
