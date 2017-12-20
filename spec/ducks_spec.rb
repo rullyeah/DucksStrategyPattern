@@ -28,6 +28,12 @@ describe 'Duck specification' do
 
     expect(:squeaking).to eq(rubberDuck.quack)
   end
+
+  it 'rubberDuck can not fly' do
+    rubberDuck = RubberDuck.new
+
+    expect(nil).to eq(rubberDuck.quack)
+  end
 end
 
 class Duck
