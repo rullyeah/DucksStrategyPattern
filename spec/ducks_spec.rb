@@ -7,12 +7,20 @@ describe 'Duck specification' do
     expect(:swimming).to eq(mallardDuck.swim)
   end
 
-  it 'all ducks can swim' do
+  it 'all ducks can quack' do
     redheadDuck = RedheadDuck.new
     mallardDuck = MallardDuck.new
 
     expect(:quacking).to eq(redheadDuck.quack)
     expect(:quacking).to eq(mallardDuck.quack)
+  end
+
+  it 'all ducks can fly' do
+    redheadDuck = RedheadDuck.new
+    mallardDuck = MallardDuck.new
+
+    expect(:flying).to eq(redheadDuck.fly)
+    expect(:flying).to eq(mallardDuck.fly)
   end
 end
 
@@ -23,6 +31,9 @@ class Duck
 
   def quack
     :quacking
+  end
+
+  def fly
   end
 end
 
