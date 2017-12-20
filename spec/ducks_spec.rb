@@ -1,38 +1,38 @@
 describe 'Duck specification' do
-  it 'all ducks can swim' do
+  it 'ducks can swim by default' do
     redheadDuck = RedheadDuck.new
     mallardDuck = MallardDuck.new
 
-    expect(:swimming).to eq(redheadDuck.swim)
-    expect(:swimming).to eq(mallardDuck.swim)
+    expect(redheadDuck.swim).to eq(:swimming)
+    expect(mallardDuck.swim).to eq(:swimming)
   end
 
-  it 'all ducks can quack' do
+  it 'ducks can quack by default' do
     redheadDuck = RedheadDuck.new
     mallardDuck = MallardDuck.new
 
-    expect(:quacking).to eq(redheadDuck.quack)
-    expect(:quacking).to eq(mallardDuck.quack)
+    expect(redheadDuck.quack).to eq(:quacking)
+    expect(mallardDuck.quack).to eq(:quacking)
   end
 
-  it 'all ducks can fly' do
+  it 'ducks can fly by default' do
     redheadDuck = RedheadDuck.new
     mallardDuck = MallardDuck.new
 
-    expect(:flying).to eq(redheadDuck.fly)
-    expect(:flying).to eq(mallardDuck.fly)
+    expect(redheadDuck.fly).to eq(:flying)
+    expect(mallardDuck.fly).to eq(:flying)
   end
 
   it 'rubberDuck squeak when quack' do
     rubberDuck = RubberDuck.new
 
-    expect(:squeaking).to eq(rubberDuck.quack)
+    expect(rubberDuck.quack).to eq(:squeaking)
   end
 
   it 'rubberDuck can not fly' do
     rubberDuck = RubberDuck.new
 
-    expect(nil).to eq(rubberDuck.fly)
+    expect(rubberDuck.fly).to eq(nil)
   end
 end
 
