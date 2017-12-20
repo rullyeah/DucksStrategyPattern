@@ -1,3 +1,5 @@
+require_relative '../src/Duck'
+
 describe 'Duck specification' do
   it 'ducks can swim by default' do
     redheadDuck = RedheadDuck.new
@@ -48,19 +50,7 @@ describe 'Duck specification' do
   end
 end
 
-class Duck
-  def swim
-    :swimming
-  end
 
-  def quack
-    :quacking
-  end
-
-  def fly
-    :flying
-  end
-end
 
 class RedheadDuck < Duck
 end
@@ -69,18 +59,55 @@ class MallardDuck < Duck
 end
 
 class RubberDuck < Duck
-  def quack
-    :squeaking
-  end
-
-  def fly
+  def initialize
+    super(
+      DefaultSwimBehavior.new,
+      SqueakSoundBehavior.new,
+      NoFlightBehavior.new
+    )
   end
 end
 
 class DecoyDuck < Duck
-  def quack
+  def initialize
+    super(
+      DefaultSwimBehavior.new,
+      NoSoundBehavior.new,
+      NoFlightBehavior.new
+    )
   end
+end
 
+class QuackSoundBehavior
+  def sounds
+    :quacking
+  end
+end
+
+class SqueakSoundBehavior
+  def sounds
+    :squeaking
+  end
+end
+
+class NoSoundBehavior
+  def sounds
+  end
+end
+
+class DefaultSwimBehavior
+  def swim
+    :swimming
+  end
+end
+
+class WingedFlightBehavior
+  def fly
+    :flying
+  end
+end
+
+class NoFlightBehavior
   def fly
   end
 end
