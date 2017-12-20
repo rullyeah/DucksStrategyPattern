@@ -34,6 +34,12 @@ describe 'Duck specification' do
 
     expect(rubberDuck.fly).to eq(nil)
   end
+
+  it 'DecoyDuck can not quack' do
+    decoyDuck = DecoyDuck.new
+
+    expect(decoyDuck.quack).to eq(nil)
+  end
 end
 
 class Duck
@@ -63,4 +69,7 @@ class RubberDuck < Duck
 
   def fly
   end
+end
+
+class DecoyDuck < Duck
 end
