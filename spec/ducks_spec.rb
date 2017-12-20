@@ -32,7 +32,7 @@ describe 'Duck specification' do
   it 'rubberDuck can not fly' do
     rubberDuck = RubberDuck.new
 
-    expect(nil).to eq(rubberDuck.quack)
+    expect(nil).to eq(rubberDuck.fly)
   end
 end
 
@@ -59,5 +59,8 @@ end
 class RubberDuck < Duck
   def quack
     :squeaking
+  end
+
+  def fly
   end
 end
