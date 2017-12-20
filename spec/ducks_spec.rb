@@ -51,4 +51,7 @@ class MallardDuck < Duck
 end
 
 class RubberDuck < Duck
+  def quack
+    :squeaking
+  end
 end
