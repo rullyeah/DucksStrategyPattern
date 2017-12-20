@@ -48,4 +48,10 @@ describe 'Duck specification' do
 
     expect(decoyDuck.fly).to eq(nil)
   end
+
+  it 'RubberDuck can fly with a rocket' do
+    rubberDuck = RubberDuck.new
+
+    expect(rubberDuck.fly).to eq(:rocketPoweredFlight)
+  end
 end
