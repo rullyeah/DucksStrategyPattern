@@ -50,7 +50,11 @@ describe 'Duck specification' do
   end
 
   it 'RubberDuck can fly with a rocket' do
-    rubberDuck = RubberDuck.new
+    rubberDuck = RubberDuck.new(
+      DefaultSwimBehavior.new,
+      SqueakSoundBehavior.new,
+      RocketPoweredFlight.new
+    )
 
     expect(rubberDuck.fly).to eq(:rocketPoweredFlight)
   end
