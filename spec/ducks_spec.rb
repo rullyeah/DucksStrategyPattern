@@ -3,26 +3,26 @@ describe 'Duck specification' do
     redheadDuck = RedheadDuck.new
     mallardDuck = MallardDuck.new
 
-    expect('swimming').to eq(redheadDuck.swim)
-    expect('swimming').to eq(mallardDuck.swim)
+    expect(:swimming).to eq(redheadDuck.swim)
+    expect(:swimming).to eq(mallardDuck.swim)
   end
 
   it 'all ducks can swim' do
     redheadDuck = RedheadDuck.new
     mallardDuck = MallardDuck.new
 
-    expect('quacking').to eq(redheadDuck.quack)
-    expect('quacking').to eq(mallardDuck.quack)
+    expect(:quacking).to eq(redheadDuck.quack)
+    expect(:quacking).to eq(mallardDuck.quack)
   end
 end
 
 class Duck
   def swim
-    'swimming'
+    :swimming
   end
 
   def quack
-    'quacking'
+    :quacking
   end
 end
 
