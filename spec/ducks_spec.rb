@@ -10,6 +10,7 @@ end
 
 class Duck
   def swim
+    'swimming'
   end
 end
 
