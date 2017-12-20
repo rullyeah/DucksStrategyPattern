@@ -22,6 +22,12 @@ describe 'Duck specification' do
     expect(:flying).to eq(redheadDuck.fly)
     expect(:flying).to eq(mallardDuck.fly)
   end
+
+  it 'rubberDuck squeak when quack' do
+    rubberDuck = RubberDuck.new
+
+    expect(:squeaking).to eq(rubberDuck.quack)
+  end
 end
 
 class Duck
@@ -42,4 +48,7 @@ class RedheadDuck < Duck
 end
 
 class MallardDuck < Duck
+end
+
+class RubberDuck < Duck
 end
