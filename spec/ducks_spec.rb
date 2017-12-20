@@ -22,6 +22,7 @@ class Duck
   end
 
   def quack
+    'quacking'
   end
 end
 
